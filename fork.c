@@ -26,7 +26,8 @@ int main(){
     }
     else{
 	    int status;
-	    printf("My child with PID %d slept for %d \n",wait(&status),WEXITSTATUS(status));
+	    int t = wait(&status);
+	    printf("My child with PID %d slept for %d \n",t,WEXITSTATUS(status));
 	    return 0;
     }
   }
